@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Main Content (Checkout) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/navy_blue"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:titleTextAppearance="@style/ToolbarTitleText"
+            android:title="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:textSize="28sp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/navy_blue"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <EditText
+            android:id="@+id/etHouseNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="House Number"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/etStreetName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Street Name"
+            app:layout_constraintTop_toBottomOf="@id/etHouseNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etTown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Town/City"
+            app:layout_constraintTop_toBottomOf="@id/etStreetName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etProvince"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Province"
+            app:layout_constraintTop_toBottomOf="@id/etTown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etPostalCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Postal Code"
+            app:layout_constraintTop_toBottomOf="@id/etProvince"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            app:layout_constraintTop_toBottomOf="@id/etPostalCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/etCvv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/etExpiryDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Expiry Date"
+            app:layout_constraintTop_toBottomOf="@id/etCvv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/btnConfirmCheckout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Confirm and Pay"
+            android:backgroundTint="@color/navy_blue"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/etExpiryDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            android:layout_marginTop="30dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_navigation" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

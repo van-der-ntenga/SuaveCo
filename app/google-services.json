@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "316086860963",
+    "firebase_url": "https://mensboutiqueapp-default-rtdb.firebaseio.com",
+    "project_id": "mensboutiqueapp",
+    "storage_bucket": "mensboutiqueapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316086860963:android:546693218c41ab22e39316",
+        "android_client_info": {
+          "package_name": "com.example.suaveco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFgAmPW27JCuuaszKs48TlhGUFjYzU4ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

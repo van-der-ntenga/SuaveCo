@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Home -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <!-- Categories with Submenu -->
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/ic_category"
+        android:title="Categories">
+        <menu>
+            <item android:id="@+id/nav_tops" android:title="Tops" />
+            <item android:id="@+id/nav_jackets" android:title="Jackets" />
+            <item android:id="@+id/nav_bottoms" android:title="Bottoms" />
+            <item android:id="@+id/nav_shoes" android:title="Shoes" />
+        </menu>
+    </item>
+
+    <!-- About -->
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_about"
+        android:title="About" />
+
+    <!-- Contact Us -->
+    <item
+        android:id="@+id/nav_contact_us"
+        android:icon="@drawable/ic_contact"
+        android:title="Contact Us" />
+
+    <!-- Account Settings -->
+    <item
+        android:id="@+id/nav_account_settings"
+        android:icon="@drawable/ic_account"
+        android:title="Account Settings" />
+
+    <!-- Logout -->
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout" />
+</menu>

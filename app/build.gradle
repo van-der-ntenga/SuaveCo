@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // Firebase plugin
+    //id 'com.android.library' // If you have a library module
+    //alias(libs.plugins.androidApplication) // If using libraries via the Gradle version catalog
+}
+
+
+android {
+    namespace 'com.example.suaveco'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.suaveco"
+        minSdk 22
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    //implementation platform('com.google.firebase:firebase-bom:33.3.0')
+    //implementation 'com.google.firebase:firebase-analytics'
+    //implementation 'com.google.firebase:firebase-auth' // Add Firebase Authentication
+    // Add Fire store or Realtime Database if needed
+    //implementation 'com.google.firebase:firebase-firestore'
+    //implementation 'com.google.firebase:firebase-database'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.68' // Check for the latest version
+    //implementation 'com.google.firebase:firebase-auth-ktx:21.1.0' // Check for the latest version
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    implementation 'com.google.android.material:material:1.9.0' // For Material Drawer
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1' // For Drawer Layout
+    implementation 'androidx.navigation:navigation-fragment:2.6.0'
+    implementation 'androidx.navigation:navigation-ui:2.6.0'
+
+}

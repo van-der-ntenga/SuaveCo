@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme -->
+
+    <!-- Toolbar title text appearance -->
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
